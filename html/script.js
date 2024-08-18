@@ -162,7 +162,7 @@ window.addEventListener('message', function(event) {
     if (event.data.type == "notify") {       
         var data = event.data;
 
-        $("#messagePopup").css("background-color","rgb(252, 0, 0)");      
+        $("#messagePopup").css("background-color", "rgb(252, 0, 0)");      
 
         $("#messagePopup").fadeIn(500);      
         

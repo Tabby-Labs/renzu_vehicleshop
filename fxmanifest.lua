@@ -1,12 +1,22 @@
 fx_version 'cerulean'
-games {'gta5'}
-ui_page 'html/index.html'
-lua54 'yes'
-use_fxv2_oal 'yes'
+game 'gta5'
+
+description 'Vehicle Shop'
+author 'Renzuzu, Updated by Tabby'
+version '1.22.0'
 
 shared_scripts {
-	'config.lua',
-	'vehicles.lua',
+	'@ox_lib/init.lua',
+	'shared/sh_conf.lua',
+	'shared/sh_veh.lua'
+}
+
+client_scripts {
+	'brigde/client/*.lua',
+}
+
+server_scripts {
+	'bridge/server/*.lua'
 }
 
 server_scripts {
@@ -20,17 +30,18 @@ client_scripts {
 	'client/client.lua',
 }
 
+ui_page 'html/index.html'
+data_file 'DLC_ITYP_REQUEST' 'stream/garage.ytyp'
 files {
 	'html/design.css',
 	'html/index.html',
 	'html/script.js',
-	'html/fonts/*',	
-	'html/brands/*.png',	
+	'html/fonts/*',
+	'html/brands/*.png',
 	'imgs/*.png',
 	'imgs/uploads/*.jpg',
+	'stream/garage.ytyp'
 }
 
-data_file 'DLC_ITYP_REQUEST' 'stream/garage.ytyp'
-files {
-    'stream/garage.ytyp'
-}
+lua54 'yes'
+use_fxv2_oal 'yes'
