@@ -1,3 +1,4 @@
+local Core = Framework:getObject()
 
 local LastVehicleFromGarage
 local id = 'A'
